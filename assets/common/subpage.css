@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* -------------------------------------------------- */
+/* primary */
+/*--------------------------------------------------- */
+#primary {
+  width: 100%; }
+  #primary .container {
+    height: 300px;
+    position: relative; }
+  #primary img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  #primary .heading {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    height: 150px;
+    background-color: #797979;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center; }
+    #primary .heading:after {
+      content: "";
+      height: 70px;
+      width: 1px;
+      border-left: 1px solid #484848;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -50px;
+      z-index: 2; }
+    #primary .heading p {
+      font-size: 20px;
+      font-size: 2rem;
+      width: 100%;
+      margin-bottom: 8px; }
+    #primary .heading h2 {
+      font-size: 32px;
+      font-size: 3.2rem;
+      width: 100%; }
+  #primary .headingText {
+    margin: 150px auto 0;
+    max-width: 600px;
+    font-size: 16px;
+    font-size: 1.6rem; }
+
+/* -------------------------------------------------- */
+/* レスポンシブ */
+/*--------------------------------------------------- */
+@media (max-width: 768px) {
+  #primary .container {
+    height: 200px; }
+  #primary img {
+    height: 200px; }
+  #primary .heading {
+    width: calc(100% - 100px);
+    height: 130px; }
+    #primary .heading p {
+      font-size: 18px;
+      font-size: 1.8rem; }
+    #primary .heading h2 {
+      font-size: 28px;
+      font-size: 2.8rem; }
+  #primary .headingText {
+    max-width: initial;
+    width: calc(100% - 100px); } }

@@ -1,0 +1,81 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+.mainSection
+	margin-top: 50px
+/* -------------------------------------------------- */
+/* single
+/*--------------------------------------------------- */
+#page
+	.pageFlex
+		border: 1px solid #aaa
+		padding: $pad24
+
+	.catch
+		margin-bottom: $pad24
+		position: relative
+
+
+
+
+		h1
+			@include rem(28)
+			font-weight: 700
+			font-family: $font-family-gothic
+			line-height: 1.2em
+			border-bottom: 1px solid $color-main
+			display: inline-block
+			padding-bottom: $pad16
+			&:after
+				content: ''
+				border-bottom: 1px solid #ddd
+				width: 100%
+				display: block
+				position: absolute
+				bottom: 0
+				z-index: -2
+
+
+	.contents
+		@include rem(18)
+		p
+			@include rem(18)
+	/* -------------------------------------------------- */
+	/* コンタクトフォーム
+	/*--------------------------------------------------- */
+	.wpcf7-form
+
+
+		input[type="text"],input[type="email"],textarea
+			border: 1px solid #ddd
+			padding: $pad8 0 $pad8 $pad16
+			margin: $pad8 0 $pad24
+			color: #888
+			width: 100%
+		[type="submit"]
+			@include btn-div(#fff,$color-main)
+			height: 50px
+			max-width: 200px
+			margin: auto
+			@include rem(20)
+	/* -------------------------------------------------- */
+	/* レスポンシブ
+	/*--------------------------------------------------- */
+
+
+	@include mb
+		
+
+
+		.pageFlex
+			padding: $pad16
+		.catch
+
+			h1
+				@include rem(24)
+
+				line-height: 1.2em
+
+		.contents
+			@include rem(16)

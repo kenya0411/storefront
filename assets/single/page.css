@@ -1,0 +1,247 @@
+@charset "UTF-8";
+.mainSection {
+  margin-top: 50px;
+}
+
+/* -------------------------------------------------- */
+/* single */
+/*--------------------------------------------------- */
+#single {
+  /* -------------------------------------------------- */
+  /* レスポンシブ */
+  /*--------------------------------------------------- */
+}
+#single .singleFlex {
+  border: 1px solid #aaa;
+  padding: 24px;
+}
+#single .cat {
+  margin-bottom: 16px;
+}
+#single .cat a {
+  background-color: #D6943A;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+#single .catch {
+  margin-bottom: 8px;
+}
+#single .catch h1 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  line-height: 1.2em;
+}
+#single .time {
+  text-align: right;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+#single .thumb {
+  margin-bottom: 24px;
+}
+#single .thumb img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 1000px) {
+  #single .thumb img {
+    height: 300px;
+  }
+}
+#single .contents {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+#single .related {
+  margin: 48px 0;
+}
+#single .related h3 {
+  position: relative;
+  padding-left: 1em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+#single .related h3:before {
+  content: "";
+  border-left: 3px solid #957B0E;
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+#single .related ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#single .related li {
+  width: calc(33.3333% - 10px);
+  border: 1px solid #aaa;
+}
+#single .related li img {
+  height: 170px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#single .related .related-title {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  height: calc(100% - 170px);
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#single .related .related-title div {
+  width: 100%;
+}
+#single .related .related-title h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.3em;
+}
+#single .related .related-title .days {
+  text-align: right;
+  margin-top: 8px;
+}
+#single .pageFlex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#single .pageFlex li {
+  border: 1px solid #aaa;
+  width: calc(50% - 10px);
+}
+#single .pageFlex a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#single .pageFlex a img {
+  min-height: 100px;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#single .pageFlex a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#single .pageFlex a .reThumb {
+  position: relative;
+  width: 150px;
+}
+#single .pageFlex a .reContent {
+  padding: 16px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  width: calc(100% - 150px);
+}
+#single .pageFlex .move {
+  position: absolute;
+  top: 0;
+  background: #67ACE6;
+  padding: 4px 16px;
+  color: #fff;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+#single .pageFlex .prev {
+  left: 16px;
+}
+#single .pageFlex .next {
+  right: 16px;
+}
+@media (max-width: 1000px) {
+  #single .pageFlex ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #single .pageFlex li {
+    width: calc(100%);
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  #single .singleFlex {
+    padding: 16px;
+  }
+  #single .cat {
+    margin-bottom: 16px;
+  }
+  #single .cat a {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  #single .catch h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.2em;
+  }
+  #single .time {
+    text-align: right;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #single .thumb {
+    margin-bottom: 16px;
+  }
+  #single .thumb img {
+    height: 300px;
+  }
+  #single .contents {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #single .related {
+    margin: 48px 0 60px;
+  }
+  #single .related ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #single .related li {
+    width: calc(100%);
+    margin-bottom: 24px;
+  }
+  #single .related li img {
+    height: 100px;
+  }
+  #single .related .related-title {
+    height: calc(100% - 100px);
+  }
+  #single .related .related-title div {
+    width: 100%;
+  }
+}

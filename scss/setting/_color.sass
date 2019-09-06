@@ -1,0 +1,93 @@
+@charset "UTF-8"
+
+// ベース色
+$color-main: #AF881C
+$color-accent: #FFC926
+$color-tel: $color-main
+$color-foot-bg: #333333
+
+
+// 背景
+$color-bg: #fff
+$color-bg-accent: #F9F9F9
+
+// リンク色
+$color-link: #666666
+$color-link-hover: #B25900
+
+// テキスト色
+$color-text: #6C6C6C
+$color-text-thin: #666
+$color-white: #fff
+
+// ヘッダー色
+$color-nav-link: $color-link
+$color-nav-hover: #FF8000
+
+// フッター色
+$color-foot: $color-link
+$color-foot-link: #fff
+$color-foot-hover: #FF8000
+
+
+// 透過度
+$opacity: 0.6
+
+// ボタン
+
+$btn-bg: #FF7A33
+$btn-color: #FFFFFF
+$btn-border: 1px solid #FF7A33
+// hover
+$btn-hbg: #FFFFFF
+$btn-hcolor: #FF7A33
+$btn-hborder: 1px solid #FF7A33
+
+
+
+//--------------------------------------------------- 
+// 変数
+//--------------------------------------------------- 
+=a-color($a-color)
+	color: $a-color
+	&:visited
+		color: $a-color
+
+
+// リンク色
+=color-link
+	color: $color-link
+	&:visited
+		color: $color-link
+	&:hover
+		color: $color-link-hover
+
+// ヘッダー色
+=nav-link
+	color: $color-nav-link
+	&:visited
+		color: $color-nav-link
+	&:hover
+		color: $color-nav-hover
+
+// フッター色
+=foot-link
+	color: $color-foot-link
+	&:visited
+		color: $color-foot-link
+	&:hover
+		color: $color-foot-hover
+
+
+//--------------------------------------------------- 
+// グラデーション
+//--------------------------------------------------- 
+
+//グラデーション
+$grd-color1: #FFC926
+$grd-color2: #FDAB62
+$gradient: -45deg, $grd-color1 1%, $grd-color2 70%
+$gradient-linner: 135deg, $grd-color1 10%,$grd-color2 70%
+
+$grd-color3: #FC7A05
+$grd-color4: #FFC926

@@ -1,0 +1,151 @@
+@charset "UTF-8"
+
+
+// -------------------------------------------------- 
+// 鍵カッコ
+//--------------------------------------------------- 
+
+=kagikakko($kagi)
+	span
+		content: ''
+		width: 20px
+		height: 20px
+		position: absolute
+		display: inline-block
+	.kagi01
+		border-left: solid 1px $kagi
+		border-bottom: solid 1px $kagi
+		left: 0
+		bottom: 0
+	.kagi02
+		border-right: solid 1px $kagi
+		border-top: solid 1px $kagi
+		right: 0
+		top: 0
+	.kagi03
+		border-right: solid 1px $kagi
+		border-bottom: solid 1px $kagi
+		right: 0
+		bottom: 0
+	.kagi04
+		border-left: solid 1px $kagi
+		border-top: solid 1px $kagi
+		left: 0
+		top: 0
+	&:before
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+		@include rem(20)
+		color: #999999
+
+
+// -------------------------------------------------- 
+// html
+//--------------------------------------------------- 
+//<span class="kagi01"></span><span class="kagi02"></span><span class="kagi03"></span><span class="kagi04"></span>
+
+
+
+//--------------------------------------------------- 
+// フォームボタン
+//--------------------------------------------------- 
+
+=check
+	.check
+		display: none
+	.check + span 
+		cursor: pointer
+		display: inline-block
+		position: relative
+		padding-left: 1.8em
+		margin-right: 3em
+
+	.check + span::before 
+		background: #fff
+		border: 1px solid #666666
+		content: ""
+		display: block
+		height: 15px
+		left: 0
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 3px
+		margin: auto
+		width: 15px
+	.check + span::after 
+		-webkit-transform: translateY(-50%) rotate(-45deg)
+		transform: translateY(-50%) rotate(-45deg)
+		border-bottom: 3px solid $color-main
+		border-left: 3px solid $color-main
+		content: ""
+		display: block
+		height: 8px
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 2px
+		bottom: 0
+		margin: auto
+		transition: all 0.3s ease 0s
+		width: 14px
+	.check:checked + span::after 
+		opacity: 1
+
+
+
+=radio
+	.radio
+		display: none	
+		
+
+	.radio + span 	
+		cursor: pointer	
+		display: inline-block	
+		position: relative	
+		padding-left: 1.8em
+		padding-right: 3em
+		
+
+	.radio + span::before 	
+		-webkit-transform: translateY(-50%)	
+		background: #fff	
+		border: 1px solid #666666
+		border-radius: 50%	
+		content: ""	
+		display: block	
+		height: 17px	
+		width: 17px	
+		left: 0	
+		position: absolute	
+		top: calc(50% - 2px)
+		transform: translateY(-50%)	
+		
+		
+
+	.radio + span::after 	
+		-webkit-transform: translateY(-50%)	
+		background: #666666	
+		border: 1px solid transparent	
+		border-radius: 50%	
+		content: ""	
+		height: 9px	
+		left: 4px	
+		opacity: 0	
+		padding: 2px	
+		position: absolute	
+		top: calc(50% - 2px)
+		transform: translateY(-50%)	
+		transition: all 0.3s ease 0s	
+		width: 9px	
+		
+
+	.radio:checked + span::after 	
+		opacity: 1	
+
+
+
+
+

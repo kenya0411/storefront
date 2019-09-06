@@ -1,0 +1,91 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+
+html
+	font-size: $font-size-base
+	font-family: $font-family-yumincho
+	color: $color-text
+body
+	margin: 0
+	background-color: $color-bg
+	line-height: 1.7em
+a
+	text-decoration: none
+	@include color-link
+	&:hover
+		transition-duration: 0.5s	
+.tel,.tel2
+	a,a:visited
+		color: $color-tel
+
+*,*::before,*::after 
+	box-sizing: border-box
+*
+	line-height: 1.5em
+	word-break: break-all
+li
+	list-style: none
+img
+	display: block
+	margin: 0
+	padding: 0
+	font-family: 'object-fit: cover;'/9 /*IE対策*/
+	width: 100%
+@include ie
+	img
+		font-family: 'object-fit: cover;' /*IE対策*/
+
+h2,h3,h4,h5
+	font-weight: 700
+	line-height: 1em
+
+
+
+/*--------------------------------------------------- */
+/* ユーティリティタグ
+/*--------------------------------------------------- */
+.flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.maxWid
+	max-width: $pc
+	width: 100%
+	margin: 0 auto
+@include pc
+	.mbPad
+		padding-left: $mbPad
+		padding-right: $mbPad
+
+@include pcsmall
+	.mbPad
+		padding-left: 50px
+		padding-right: 50px
+
+@include tab
+	.maxWid
+		max-width: initial
+	.mbInvi
+		display: none
+
+@include tabup
+	.pcInvi
+		display: none
+
+@include mbup
+	.pcInvi2
+		display: none
+		
+@include pcsmall
+	.pcInvi3
+		display: none
+
+@include mb
+	.mbInvi2
+		display: none
+

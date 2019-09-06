@@ -1,0 +1,71 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+#primary
+	.heading
+		&:after
+			display: none
+
+.mainSection
+	margin-top: 150px
+/* -------------------------------------------------- */
+/* cartPage
+/*--------------------------------------------------- */
+#cartPage
+	table
+		width: 100%
+		margin-bottom: 0
+	th
+		border-bottom: 1px solid #ccc
+		padding-bottom: $pad8
+		text-align: center
+	td
+		padding: $pad16
+		@include rem(15)
+		text-align: center
+
+		
+	td.product-name,td.product-price,td.product-quantity,td.product-subtotal
+		position: relative
+		&:after
+			content: ''
+			border-right: 1px dashed #ddd
+			height: 100px
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			margin: auto
+	td.product-name
+		text-align: left
+		width: 250px
+	.product-remove
+		width: 70px
+		a
+			margin: auto
+	.product-thumbnail
+		width: 150px
+		padding-left: 0
+		padding-right: 0
+
+		img
+			width: 100%
+			max-width: 200px
+			object-fit: cover
+			height: 100px
+	.actions
+		text-align: right
+	.cart_item
+		td
+			border-bottom: 1px solid #ccc
+			padding-bottom: $pad16
+	.cart_totals
+		h2
+			display: none
+		width: 200px
+	.cart-subtotal
+		width: 100px
+		th,td
+			width: 50%
+			border-bottom: 0

@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* -------------------------------------------------- */
+/* primary */
+/*--------------------------------------------------- */
+#primary .heading:after {
+  display: none;
+}
+
+.mainSection {
+  margin-top: 50px;
+}
+
+/* -------------------------------------------------- */
+/* product */
+/*--------------------------------------------------- */
+#product .productFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#product .flex4:nth-of-type(1) {
+  width: 100%;
+  margin-bottom: 32px;
+}
+#product .flex4:nth-of-type(2) {
+  width: calc(100% - 350px);
+}
+#product .flex4:nth-of-type(2) img {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+#product .flex4 img.wp-post-image {
+  width: auto;
+}
+#product .flex4 .woocommerce-product-gallery__image img {
+  width: auto;
+}
+#product .flex4:nth-of-type(3) {
+  width: 300px;
+}
+#product .flex4:nth-of-type(4) {
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  margin-top: 32px;
+  padding: 32px;
+}
+#product .flex4:nth-of-type(4) h4 {
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-weight: 400;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+#product .flex4:nth-of-type(4) p {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media (max-width: 1000px) {
+  #product .flex4:nth-child(-n+4) {
+    width: 100%;
+  }
+  #product .flex4:nth-child(-n+4) img {
+    max-width: initial;
+    margin-bottom: 32px;
+  }
+}
+#product h3 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  padding-left: 1em;
+  position: relative;
+  color: #3E3E3E;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+#product h3:before {
+  content: "";
+  width: 1px;
+  height: 120%;
+  border-left: 3px solid #707070;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#product .catch {
+  font-size: 20px;
+  font-size: 2rem;
+}
+#product .detail {
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin: 16px 0;
+  padding: 16px 0;
+}
+#product .detail p {
+  margin-top: 16px;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+#product .flex {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+#product .price {
+  color: #E06417;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+#product .etc {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+#product .addCart {
+  width: 300px;
+  height: 46px;
+  position: relative;
+}
+#product .addCart a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  word-break: break-all;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #FF7A33;
+  text-align: center;
+  border: 1px solid #FF7A33;
+  color: #FFFFFF;
+  font-size: 18px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#product .addCart a:hover {
+  background: #FFFFFF;
+  color: #FF7A33;
+  border: 1px solid #FF7A33;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media (max-width: 1000px) {
+  #product .addCart {
+    max-width: initial;
+    width: 100%;
+  }
+}
+#product del {
+  color: #aaa;
+}
+#product del span {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+#product ins {
+  text-decoration: none;
+}
+#product .swiper-button-prev, #product .swiper-button-next {
+  background-image: none;
+}
+#product .swiper-button-prev:after, #product .swiper-button-next:after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 700;
+  font-size: 46px;
+  font-size: 4.6rem;
+  color: #aaa;
+  -webkit-text-stroke: 3px white;
+}
+#product .swiper-button-next:after {
+  content: "";
+}
+
+/* -------------------------------------------------- */
+/* レスポンシブ */
+/*--------------------------------------------------- */

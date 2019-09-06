@@ -1,0 +1,133 @@
+@charset "UTF-8"
+
+//追加マウスオーバー
+
+=under()
+	position: relative
+	display: inline-block
+	text-decoration: none
+	&::after
+		position: absolute
+		bottom: -4px
+		left: 0
+		content: ''
+		width: 100%
+		height: 2px
+		background: #fff
+		transform: scale(0, 1)
+		transform-origin: left top
+		transition: transform .3s
+	&:hover::after
+		transform: scale(1, 1)
+
+=undernone()
+	position: static
+	display: block
+	text-decoration: none
+	&::after
+		position: static
+		bottom: 0
+		left: 0
+		content: ''
+		width: 0
+		height: 0
+		background: transparent
+		transform: scale(1)
+		transform-origin: center
+		transition: transform 0
+	&:hover::after
+		transform: scale(1)
+
+
+//--------------------------------------------------- 
+// シャイン
+//--------------------------------------------------- 
+=hover-shine($color-shine,$shine-opacity)
+	position: relative
+	overflow: hidden
+	&:before
+		position: absolute
+		top: 0
+		left: -100%
+		z-index: 2
+		display: block
+		content: ''
+		width: 50%
+		height: 100%
+		$color-shine1: rgba($color-shine, 0)
+		$color-shine2: rgba($color-shine, $shine-opacity)
+		background: -webkit-linear-gradient(left, $color-shine1 0%, $color-shine2 100%)
+		background: linear-gradient(to right, $color-shine1 0%, $color-shine2 100%)
+		-webkit-transform: skewX(-25deg)
+		transform: skewX(-25deg)
+	&:hover::before
+		-webkit-animation: shine .75s
+		animation: shine .75s
+
+	@-webkit-keyframes shine
+		100%
+			left: 125%
+
+
+	@keyframes shine
+		100%
+			left: 125%
+
+
+//--------------------------------------------------- 
+// ホバースケール
+//--------------------------------------------------- 
+=hover-scale($hover-scale1,$hover-scale2)
+
+	-webkit-transform: scale(1)
+	transform: scale(1)
+	-webkit-transition: .3s ease-in-out
+	transition: .3s ease-in-out
+
+	&:hover 
+		-webkit-transform: scale($hover-scale1)
+		transform: scale($hover-scale1)
+		opacity: $hover-scale2
+
+//--------------------------------------------------- 
+// グラデーションホバー
+//--------------------------------------------------- 
+=gradation
+	display: flex
+	justify-content: center
+	align-items: center
+	word-break: break-all
+	width: 100%
+	height: 100%
+	text-align: center
+	border: none
+	padding: 6px 6px 5px
+	&:before
+		content: ""
+		top: -0.6px
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: -1
+		left: 0
+		transition: 0.5s
+		background: $grd-color2 /* Old browsers */
+		background: -moz-linear-gradient($gradient) 
+		background: -webkit-linear-gradient($gradient) 
+		background: linear-gradient(135deg, $grd-color1 10%,$grd-color2 70%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grd-color1', endColorstr='$grd-color2',GradientType=1 )
+	 
+	&:after
+		content: ""
+		top: -0.6px
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: -2
+		left: 0
+		background: -moz-linear-gradient(-45deg, $grd-color3 1%, $grd-color4 70%) 
+		background: -webkit-linear-gradient(-45deg, $grd-color3 1%, $grd-color4 70%) 
+		background: linear-gradient(135deg, $grd-color3 10%,$grd-color4 70%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grd-color3', endColorstr='$grd-color4',GradientType=1 )
+	&:hover:before
+		opacity: 0

@@ -1,0 +1,188 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+.mainSection
+	margin-top: 50px
+/* -------------------------------------------------- */
+/* single
+/*--------------------------------------------------- */
+#single
+	.singleFlex
+		border: 1px solid #aaa
+		padding: $pad24
+	.cat
+		margin-bottom: $pad16
+		a
+			background-color: #D6943A
+			padding: $pad8 $pad16
+			color: #fff
+			font-weight: 700
+			border-radius: 30px 
+			@include rem(12)
+	.catch
+		margin-bottom: $pad8
+
+		h1
+			@include rem(28)
+			font-weight: 700
+			font-family: $font-family-gothic
+			line-height: 1.2em
+	.time
+		text-align: right
+		margin-bottom: $pad16
+		@include rem(12)
+	.thumb
+		margin-bottom: $pad24
+		img
+			width: 100%
+			height: 400px
+			object-fit: cover
+			@include pcsmall
+				height: 300px
+	.contents
+		@include rem(18)
+	.related
+		margin: $pad48 0
+		h3
+			position: relative
+			padding-left: 1em
+			@include rem(18)
+			margin-bottom: $pad16
+			&:before
+				content: ""
+				border-left: 3px solid #957B0E
+				height: 100%
+				width: 3px
+				position: absolute
+				margin: auto
+				left: 0
+				bottom: 0
+				top: 0
+		ul
+			display: flex
+			justify-content: space-between
+		li
+			width: calc(33.3333% - 10px)
+			border: 1px solid #aaa
+
+			img
+				height: 170px
+				object-fit: cover
+		.related-title
+			padding: $pad16
+			display: flex
+			align-content: space-between
+			height: calc(100% - 170px)
+			flex-wrap: wrap
+			div
+				width: 100%
+
+			h4
+
+				@include rem(16)
+				line-height: 1.3em
+			.days
+				text-align: right
+				margin-top: $pad8
+
+	.pageFlex
+		ul
+			display: flex
+			justify-content: space-between
+
+		li
+			border: 1px solid #aaa
+			width: calc(50% - 10px)
+		a
+			display: flex
+			height: 100%
+			justify-content: space-between
+			img
+				
+				min-height: 100px
+				height: 100%
+				object-fit: cover
+
+			div
+				display: flex
+				align-items: center
+			.reThumb
+				position: relative
+				width: 150px
+			.reContent
+				padding: $pad16
+				@include rem(16)
+				width: calc(100% - 150px)
+
+
+		.move
+			position: absolute
+			top: 0
+
+			background: #67ACE6
+			padding: 4px $pad16
+			color: #fff
+			@include rem(14) 
+		.prev
+			left: 16px
+		.next
+			right: 16px
+		@include pcsmall
+			ul
+				flex-wrap: wrap
+
+			li
+				width: calc(100%)
+				margin-bottom: $pad24
+
+
+	/* -------------------------------------------------- */
+	/* レスポンシブ
+	/*--------------------------------------------------- */
+
+
+	@include mb
+		
+
+
+		.singleFlex
+			padding: $pad16
+		.cat
+			margin-bottom: $pad16
+			a
+				@include rem(11)
+		.catch
+
+			h1
+				@include rem(24)
+
+				line-height: 1.2em
+		.time
+			text-align: right
+			margin-bottom: $pad16
+			@include rem(12)
+		.thumb
+			margin-bottom: $pad16
+			img
+				height: 300px
+
+		.contents
+			@include rem(16)
+		.related
+			margin: $pad48 0 60px
+
+			ul
+				flex-wrap: wrap
+			li
+				width: calc(100%)
+				margin-bottom: $pad24
+
+				img
+					height: 100px
+			.related-title
+
+				height: calc(100% - 100px)
+				div
+					width: 100%
+

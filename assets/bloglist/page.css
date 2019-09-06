@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* -------------------------------------------------- */
+/* primary */
+/*--------------------------------------------------- */
+#primary .heading:after {
+  display: none;
+}
+
+.mainSection {
+  margin-top: 150px;
+}
+
+/* -------------------------------------------------- */
+/* blog */
+/*--------------------------------------------------- */
+#blog .blogFlex2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+#blog .flex {
+  border: 1px solid #AAAAAA;
+}
+#blog .flex2 {
+  position: relative;
+  height: 150px;
+}
+#blog .flex2:nth-of-type(1) {
+  width: 250px;
+}
+@media (max-width: 1000px) {
+  #blog .flex2:nth-of-type(1) {
+    max-width: 150px;
+  }
+}
+#blog .flex2:nth-of-type(2) {
+  height: 150px;
+  width: calc(100% - 250px);
+  position: relative;
+}
+@media (max-width: 1000px) {
+  #blog .flex2:nth-of-type(2) {
+    width: calc(100% - 150px);
+  }
+}
+#blog .flex2:nth-of-type(2) div {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+#blog .flex2:nth-of-type(2) a {
+  width: 100%;
+  padding: 16px;
+  position: absolute;
+  height: 100%;
+}
+#blog img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 1000px) {
+  #blog img {
+    max-width: 150px;
+  }
+}
+#blog .blogCat {
+  position: absolute;
+  background-color: #E09811;
+  padding: 6px 12px;
+  border-radius: 30px;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+}
+#blog .blogCat a {
+  color: #fff;
+}
+#blog h3 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  margin-bottom: 8px;
+}
+#blog p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+  #blog p {
+    display: none;
+  }
+}

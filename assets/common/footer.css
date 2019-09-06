@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* -------------------------------------------------- */
+/* footer */
+/*--------------------------------------------------- */
+footer {
+  margin-top: 100px;
+  width: 100%;
+  background-color: #F2F2F2;
+  border-top: 1px solid #CBCBCB;
+  border-bottom: 1px solid #CBCBCB;
+  padding: 24px 0; }
+  footer .flex {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  footer .flexChild {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    height: 100%; }
+  footer .flexChild2 {
+    width: 100%; }
+  footer .flexChild2 {
+    text-align: right; }
+    footer .flexChild2:nth-of-type(1) {
+      font-size: 16px;
+      font-size: 1.6rem; }
+    footer .flexChild2:nth-of-type(2) {
+      font-size: 20px;
+      font-size: 2rem; }
+  footer .footFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    footer .footFlex li {
+      margin-left: 16px; }
+      footer .footFlex li:before {
+        content: "|";
+        margin-right: 16px; }
+      footer .footFlex li:nth-of-type(1):before {
+        content: ""; }
+
+/* -------------------------------------------------- */
+/* TOPへ戻る */
+/*--------------------------------------------------- */
+#footGoto {
+  position: fixed;
+  right: 8px;
+  bottom: 8px; }
+  #footGoto a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #AF881C;
+    background: #fff;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.9;
+    padding: 1.7em 0 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif; }
+    #footGoto a:before {
+      font-family: "Font Awesome 5 Free";
+      content: '\f102';
+      font-weight: 700;
+      position: absolute;
+      top: 0.5em;
+      font-size: 22px;
+      font-size: 2.2rem; }
+    #footGoto a:hover {
+      opacity: 0.7;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
+
+/* -------------------------------------------------- */
+/* レスポンシブ */
+/*--------------------------------------------------- */
+@media (max-width: 768px) {
+  /* -------------------------------------------------- */
+  /* footer */
+  /*--------------------------------------------------- */
+  footer {
+    padding: 24px 0; }
+    footer .flex {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    footer .flex2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 100%; }
+      footer .flex2 img {
+        max-width: 250px;
+        margin-bottom: 16px; }
+    footer .flexChild {
+      height: 100%; }
+    footer .flexChild2 {
+      width: 100%; }
+    footer .flexChild2 {
+      text-align: center; }
+      footer .flexChild2:nth-of-type(1) {
+        font-size: 16px;
+        font-size: 1.6rem; }
+      footer .flexChild2:nth-of-type(2) {
+        font-size: 20px;
+        font-size: 2rem; }
+    footer .footFlex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      footer .footFlex li {
+        margin-left: 16px; }
+        footer .footFlex li:before {
+          content: "";
+          margin-right: 16px; }
+        footer .footFlex li:nth-of-type(1):before {
+          content: ""; } }

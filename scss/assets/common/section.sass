@@ -1,0 +1,333 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+/* -------------------------------------------------- */
+/* 共通
+/*--------------------------------------------------- */
+
+=h2
+	@include rem(36)
+	font-family: $font-family-timesnew
+	font-weight: 400
+	position: relative
+	margin-bottom: $pad32
+	&:before
+		content: ""
+		border-top: 1px solid #707070
+		width: 50px
+		display: inline-block
+		margin: auto
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -60px
+		margin: auto
+		height: 1px
+p
+	@include rem(20)
+	font-family: $font-family-yumincho
+
+$border: #707070
+
+/* -------------------------------------------------- */
+/* about
+/*--------------------------------------------------- */
+#about
+	margin-top: 200px
+	h2
+		@include h2
+
+
+/* -------------------------------------------------- */
+/* mainSection
+/*--------------------------------------------------- */
+
+
+.mainSection
+	display: flex
+	margin-top: 100px
+	justify-content: space-between
+	.msLeft
+		width: calc(100% - 300px)
+	.msRight
+		width: calc(250px)
+/* -------------------------------------------------- */
+/* items
+/*--------------------------------------------------- */
+#items
+	h2
+		@include h2
+
+	.itemSort
+		margin-bottom: $pad32
+		.flex2
+			display: flex
+			align-items: center
+			&:nth-of-type(1)
+				@include rem(22)
+				margin-right: $pad40
+			&:nth-of-type(2)
+				@include rem(16)
+				position: relative
+				&:after
+					content: ""
+					width: 0
+					height: 0
+					border-style: solid
+					right: 16px
+					position: relative
+					border-width: 8px 4px 0 4px
+					border-color: #333 transparent transparent transparent
+
+			select
+				min-height: 30px
+				-webkit-appearance: button
+				-moz-appearance: button
+				appearance: button
+				border-radius: 0
+
+				border-bottom: 1px solid #aaa
+				padding-right: $pad24
+
+	.itemFlex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.itemFlex2
+			width: calc(33.33% - 32px)
+			margin-bottom: $pad48
+		.flex
+			flex-wrap: wrap
+		.itm
+			width: 100%
+			h3	
+				font-weight: 400
+				margin-top: $pad16
+				margin-bottom: $pad8
+				@include rem(16)
+
+			p
+				font-weight: 700
+				@include rem(16)
+
+
+/* -------------------------------------------------- */
+/* aside
+/*--------------------------------------------------- */
+aside
+	h3
+		@include rem(20)
+		font-weight: 700
+		border-bottom: 1px solid $border
+		padding-bottom: $pad8
+		margin-bottom: $pad16
+	input[name="s"]
+		border: 1px solid #aaa
+		width: 250px
+		height: 40px
+		padding-left: $pad8
+	#searchform
+		position: relative
+		width: 250px
+		height: 40px
+		#searchsubmit
+			@include rem(20)
+			color: #707070
+
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+			right: 10px
+	.aside
+		margin-bottom: $pad48
+	li
+		@include rem(16)
+		line-height: 2em
+
+
+
+
+
+/* -------------------------------------------------- */
+/* news
+/*--------------------------------------------------- */
+
+#news
+	h2
+		@include h2
+	.flex2
+		width: 100%
+		padding-bottom: $pad16
+		margin-bottom: $pad16
+		border-bottom: 1px solid #aaa
+	ul
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		justify-content: space-between
+
+	li
+		@include rem(16)
+		&:nth-of-type(1)
+			width: calc(18% - 20px)
+		&:nth-of-type(2)
+			width: calc(82%)
+/* -------------------------------------------------- */
+/* breadcrumbs
+/*--------------------------------------------------- */
+#breadcrumbs
+	background-color: #F2F2F2
+	padding-top: $pad16
+	padding-bottom: $pad16
+
+
+
+/* -------------------------------------------------- */
+/* レスポンシブ
+/*--------------------------------------------------- */
+
+=h2
+	@include rem(30)
+	margin-bottom: $pad32
+	&:before
+		content: ""
+		width: 50px
+		left: -60px
+@include pcsmall
+	/* -------------------------------------------------- */
+	/* 共通
+	/*--------------------------------------------------- */
+
+	p
+		@include rem(18)
+		@include tab
+			@include rem(16)
+
+
+	/* -------------------------------------------------- */
+	/* about
+	/*--------------------------------------------------- */
+	#about
+		h2
+			@include h2
+
+
+	/* -------------------------------------------------- */
+	/* mainSection
+	/*--------------------------------------------------- */
+
+
+	.mainSection
+		.msLeft
+			width: calc(100% - 250px)
+		.msRight
+			width: calc(200px)
+		@include tab
+			flex-wrap: wrap
+			.msLeft
+				width: calc(100%)
+			.msRight
+				width: calc(100%)
+	/* -------------------------------------------------- */
+	/* items
+	/*--------------------------------------------------- */
+	#items
+		h2
+			@include h2
+		@include tab
+
+			.itemSort
+				margin-bottom: $pad32
+
+				.flex2
+					align-items: center
+					&:nth-of-type(1)
+						@include rem(22)
+						margin-right: $pad40
+					&:nth-of-type(2)
+						@include rem(16)
+
+					select
+
+						padding-right: $pad24
+
+			.itemFlex
+
+				.itemFlex2
+					width: calc(33.33% - 20px)
+					margin-bottom: $pad24
+					@include mb
+						width: calc(50% - 8px)
+				.flex
+					flex-wrap: wrap
+				.itm
+					h3	
+						@include rem(16)
+
+					p
+						@include rem(16)
+
+
+
+	/* -------------------------------------------------- */
+	/* news
+	/*--------------------------------------------------- */
+
+	#news
+		h2
+			@include h2
+		@include tab
+			margin-top: 100px
+
+			.flex2
+				width: 100%
+				padding-bottom: $pad8
+				margin-bottom: $pad16
+				border-bottom: 1px solid #aaa
+			ul
+				display: flex
+				flex-wrap: wrap
+				width: 100%
+				justify-content: space-between
+
+			li
+				@include rem(16)
+				&:nth-of-type(1)
+					width: calc(100%)
+				&:nth-of-type(2)
+					width: calc(100%)
+
+
+
+
+	/* -------------------------------------------------- */
+	/* aside
+	/*--------------------------------------------------- */
+	aside
+		@include tab
+			margin-top: 100px
+			h3
+				@include rem(18)
+			input[name="s"]
+				width: 100%
+				max-width: 250px
+			#searchform
+				width: 250px
+				height: 40px
+				#searchsubmit
+					@include rem(20)
+
+			.aside
+				margin-bottom: $pad48
+			li
+				@include rem(16)
+				line-height: 2em
+
+
+
+
+
+
+
+
